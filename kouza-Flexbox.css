@@ -1,11 +1,22 @@
-.flex {
+.flex{
+  background-color: #00c7ce;
+  margin: 30px auto;
+  padding: 10px;
+}
+.flex > div {
+  background-color: #fff;
+  width: 80%;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex1 {
   background-color: #00c7ce;
   height: 50vh;
   padding: 10px;
   display: flex
 }
-
-.flex > div {
+.flex1 > div {
   background-color: #fff;
   margin: 5px;
   font-size: 30px;
@@ -13,14 +24,45 @@
 
 .flex2{
   display: flex;
-  background-color: blue;
+  background-color: lightpink;
 }
-
 .flex2>div{
   width: 33%;
   height: 300px;
   margin: 10px;
   background-color: #fff;
+}
+
+.flex3 {
+  background-color: #00c7ce;
+  height: 300px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  /*row横（標準）,row-reverse横逆,column縦,column-reverse縦逆*/
+}
+.flex3>div{
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex4 {
+  background-color: #00c7ce;
+  height: 300px
+  margin: 30px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  /*no-wrp初期値,wrap折り返し,wrap-reverse折り返し下から*/
+}
+.flex4>div{
+  background-color: #fff;
+  width: 40%;
+  margin: 5px;
+  font-size: 30px;
 }
 
 .button {
