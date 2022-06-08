@@ -33,6 +33,18 @@
   background-color: #fff;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 100px;
+  padding: 10px;
+  color: #fff;
+  background-color: black;
+}
+
+/*コンテナの並び方（縦横）flex-directionについて*/
 .flex3 {
   background-color: #99ffcc;
   height: 300px;
@@ -49,10 +61,11 @@
   font-size: 30px;
 }
 
+/*コンテナの並び方（折り返し）flex-wrapについて*/
 .flex4 {
   background-color: #00c7ce;
   height: 300px
-  margin: 30px auto;
+  margin: 15px auto;
   padding: 10px;
   display: flex;
   flex-wrap: wrap-reverse;
@@ -65,13 +78,78 @@
   font-size: 30px;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  min-height: 100px;
+/*コンテナの横整列justify-contentについて*/
+.flex5 {
+  background-color: #00c7ce;
+  margin: 5px auto;
   padding: 10px;
-  color: #fff;
-  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  /*flex-start初期値,flex-end後部から,center中央寄せ,
+  space-betweenめいいっぱい均等に振り分け,space-around適度に均等に振り分け*/
+}
+.flex5>div{
+  background-color: #fff;
+  margin: 5px auto;
+  font-size: 30px;
+}
+
+/*コンテナの縦整列align-itemsについて*/
+.flex6 {
+  background-color: #00c7ce;
+  height: 150px;
+  margin: 5px auto;
+  padding: 10px;
+  display: flex;
+  align-items: baseline;
+  /*stretch初期値,flex-start上寄せ,flex-end下寄せ,
+  center中央揃え,baseline上寄せベースラインに下部を揃える*/
+}
+.flex6>div{
+  background-color: #fff;
+  margin: 5px auto;
+  font-size: 30px;
+}
+.flex6 div:nth-child(1){
+  font-size: 50px;
+  width: 50px;
+}
+.flex6 div:nth-child(3){
+  font-size: 40px;
+  height: 70px;
+}
+.flex6 div:nth-child(4){
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+/*順番替えorderについて*/
+.flex7 {
+  background-color: #00c7ce;
+  height: 100px;
+  margin: 5px auto;
+  padding: 10px;
+  display: flex;
+}
+.flex7>div{
+  background-color: #fff;
+  width: 20%;
+  margin: 5px auto;
+  line-height: 100px;
+  font-size: 30px;
+  text-align: center
+}
+.flex7 > div:nth-child(1) {
+  order: 3;
+}
+.flex7 > div:nth-child(2) {
+  order: 4;
+}
+.flex7 > div:nth-child(3) {
+  order: 1;
+}
+.flex7 > div:nth-child(4) {
+  order: 2;
 }
